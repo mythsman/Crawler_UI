@@ -6,6 +6,7 @@ from SignUpDialog import SignUpDialog
 from HelpDialog import HelpDialog
 from AboutDialog import AboutDialog
 from UpdateDialog import UpdateDialog
+from SpiderSettingDialog import SpiderSettingDialog
 
 class Main(QtWidgets.QMainWindow, Ui_MainWindow):
 
@@ -19,7 +20,16 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
         self.action_help.triggered.connect(self.helpSlot)
         self.action_about.triggered.connect(self.aboutSlot)
         self.action_update.triggered.connect(self.updateSlot)
+        self.action_8.triggered.connect(self.spiderSettingSlot)
+        self.pushButton_8.clicked.connect(self.test)
         self.show()
+
+    def test(self):
+        uid=self.lineEdit.text()
+        testName=self.lineEdit_4.text()
+        pass
+    def spiderSettingSlot(self):
+        SpiderSettingDialog().exec()
 
     def updateSlot(self):
         UpdateDialog().exec()

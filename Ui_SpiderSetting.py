@@ -6,7 +6,8 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtCore, QtWidgets
+
 
 class Ui_SpiderSetting(object):
     def setupUi(self, SpiderSetting):
@@ -60,6 +61,7 @@ class Ui_SpiderSetting(object):
         self.spinBox_4.setObjectName("spinBox_4")
         self.spinBox_5 = QtWidgets.QSpinBox(SpiderSetting)
         self.spinBox_5.setGeometry(QtCore.QRect(200, 360, 101, 27))
+        self.spinBox_5.setMaximum(100000)
         self.spinBox_5.setProperty("value", 5)
         self.spinBox_5.setObjectName("spinBox_5")
         self.pushButton = QtWidgets.QPushButton(SpiderSetting)
@@ -88,4 +90,3 @@ class Ui_SpiderSetting(object):
         self.comboBox.setItemText(2, _translate("SpiderSetting", "点赞"))
         self.pushButton.setText(_translate("SpiderSetting", "确定"))
         self.pushButton_2.setText(_translate("SpiderSetting", "重置"))
-
